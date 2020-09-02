@@ -1,0 +1,23 @@
+//GENERAL
+@mixin tablet {
+    @media screen and (min-width: $tablet-breakpoint) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+      @content;
+    }
+  }
+  
+  @mixin reset-margin-border-box {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  @mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
