@@ -1,0 +1,11 @@
+@import '../../partials/mixins';
+@import '../../partials/typography';
+@import '../../partials/variables';
+
+.header {
+    background: $purple-dark;
+    padding: 1.5rem 2rem 0 2rem;
+&__logo {
+    width: 70%;
+}
+}
