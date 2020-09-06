@@ -1,14 +1,21 @@
 import React from 'react';
-import GoalIcon from '../../assets/icons/goal-icon-color.svg'
+import './MainMenu.scss';
+import { MdDashboard } from "react-icons/md";
+import { MdLibraryBooks } from "react-icons/md";
+import { MdCreate } from "react-icons/md";
+import { MdList } from "react-icons/md";
+
 
 
 function MainMenu() {
     return (
       <div className="main-menu">
-        <img className="main-menu__icon-1" alt="icon" src={GoalIcon} />
-        <img className="main-menu__icon-1" alt="icon" src={GoalIcon} />
-        <img className="main-menu__icon-1" alt="icon" src={GoalIcon} />
-        <img className="main-menu__icon-1" alt="icon" src={GoalIcon} />
+        <MdDashboard color="#5B3E96" size="1.5em"/>
+        <MdList color="#5B3E96" size="1.5em" />
+        <MdCreate color="#5B3E96" size="1.5em" />
+        <MdLibraryBooks color="#5B3E96" size="1.5em" />
+        
+        
         
       </div>
     );

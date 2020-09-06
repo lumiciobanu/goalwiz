@@ -1,7 +1,10 @@
 import React from 'react';
+//components
 import Header from '../Header/Header';
 import Quote from '../Main/Quote';
+import AddSection from '../Main/AddSection';
 import MainMenu from '../Main/MainMenu';
+//data
 import quotes from './QuotesData';
 
 
@@ -42,8 +45,9 @@ class MainPage extends React.Component {
           handleClick={this.handleClick}
           {...this.state}
         />
+        <AddSection />
         <MainMenu />
-      </section>
+        </section>
     );
   }
 }

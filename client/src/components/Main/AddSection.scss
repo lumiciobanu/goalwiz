@@ -1,0 +1,25 @@
+@import '../../partials/mixins';
+@import '../../partials/typography';
+@import '../../partials/variables';
+
+
+.addsection {
+    background: $purple-bg;
+    margin: 0;
+    padding: 2rem;
+&__details {
+    background: $white;
+    border-radius: 4px;
+    display: flex;
+    padding: 0.5rem;
+}
+&__text {
+    font-size: 14px;
+    line-height: 1rem;
+    margin-right: 1rem;
+} 
+&__date {
+    color: $accent;
+}
+
+}
