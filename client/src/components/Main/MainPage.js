@@ -1,16 +1,16 @@
 import React from 'react';
 //components
 import Header from '../Header/Header';
-import Quote from '../Main/Quote';
-import AddSection from '../Main/AddSection';
-import MainMenu from '../Main/MainMenu';
+import Quote from './Quote';
+import Goals from './Goals';
+import MainMenu from './MainMenu';
 //data
 import quotes from './QuotesData';
 
 
 
 class MainPage extends React.Component {
-    
+  //Quote random generator  
   constructor() {
     super();
     this.state = {
@@ -36,7 +36,8 @@ class MainPage extends React.Component {
     this.shuffleQuotes(quotes)
   };
 
-  
+  //End of Quote random generator
+
   render () {
     return(
       <section className="main-section">
@@ -45,7 +46,8 @@ class MainPage extends React.Component {
           handleClick={this.handleClick}
           {...this.state}
         />
-        <AddSection />
+        {this.state.myName}
+        <Goals />
         <MainMenu />
         </section>
     );

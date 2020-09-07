@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import QuoteIcon from '../../assets/icons/quote-icon-20.png';
 import '../Main/Quote.scss';
 
 
