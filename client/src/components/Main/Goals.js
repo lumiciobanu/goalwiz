@@ -16,20 +16,6 @@ class Goals extends React.Component {
       };
   }  
 
-// componentDidMount() {
-//     fetch('/goalsdata.json')
-//     .then(response => response.json())
-//     .then(result => {
-//         const goals = result.map(item => {
-//         return item;
-//     });
-//       this.setState({
-//         myGoals: goals
-//       });
-
-//     });
-// }
-
 componentDidMount() {
     axios
     .get('http://localhost:8080/goals')
