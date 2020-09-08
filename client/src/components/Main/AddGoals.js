@@ -1,23 +1,22 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 import './AddGoals.scss';
 import { FaPlus } from "react-icons/fa";
-import NewGoalForm from './NewGoalForm';
+import ModalTrigger from '../Modal/ModalTrigger'
 
-class AddGoals extends Component {
-  render() {
+export default function AddGoals (props) {
+  
   return (
 
-    <div className="card textcenter mt-3 add-goal">
-      <div className="goal-addheading card-header bg-primary text-white">
-        <FaPlus /> Add New Goal
+    <div className="addgoals">
+      <div onClick={props.onClick} className="addgoals__triggerbtn">
+        <ModalTrigger /> 
           </div>
 
-      {/* <NewGoalForm /> */}
+     
     </div>
 
   );
 }
-}
 
-export default AddGoals;
+

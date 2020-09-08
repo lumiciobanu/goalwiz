@@ -42,7 +42,7 @@ router.delete('/:goalId', (req, res) => {
 });
 
 
-//POST 
+//POST to post/create a new goal
 router.post('/', (req, res) => {
 
     const newGoal = {
