@@ -22,7 +22,7 @@ class ModalAdd extends Component {
                     <p className="modal__close" onClick={e => {
                         this.onClose(e);
                     }}>&times;</p>
-                    <AddForm />
+                    <AddForm onClose={this.onClose} updateGoal={this.props.updateGoal}/>
                     <div className="modal__actions">
                         <button className="modal__secondary-button" onClick={e => {
                             this.onClose(e);

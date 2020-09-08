@@ -35,10 +35,15 @@ router.get('/:goalId', (req, res) => {
 router.delete('/:goalId', (req, res) => {
     let goalToDelete = goalsData.findIndex(goal => goal.id === req.params.goalId)
     console.log(req.params.goalId)
-    goalToDelete >= 0 ?
-    
-        res.status(200).json(goalsData.splice(goalToDelete, 1)) :
+    if (goalToDelete >= 0) {
+        goalsData.splice(goalToDelete, 1)
+        res.status(200).json(goalsData)
+    }
+    else {
         res.status(400).json({ success: false, error: "Cannot delete, item not exist" });
+    }
+
+    
 });
 
 
@@ -50,7 +55,7 @@ router.post('/', (req, res) => {
     };
     console.log(req.body);
     goalsData.push(newGoal);
-    res.status(201).json(newGoal);
+    res.status(201).json(goalsData);
 });
 
 module.exports = router;

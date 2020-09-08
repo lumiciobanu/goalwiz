@@ -10,7 +10,7 @@ export default function AddGoals (props) {
 
     <div className="addgoals">
       <div onClick={props.onClick} className="addgoals__triggerbtn">
-        <ModalTrigger /> 
+        <ModalTrigger updateGoal={props.updateGoal}/> 
           </div>
 
      

@@ -30,6 +30,7 @@ class ModalTrigger extends Component {
                     show={this.state.show}
                     itemId={this.props.itemId}
                     name={this.props.itemName}
+                    updateGoal={this.props.updateGoal}
                 />}
                 {this.state.show && <h2>Lorem ispum</h2>}
                 <button className="modal__icon-delete"

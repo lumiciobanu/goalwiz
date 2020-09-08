@@ -37,7 +37,7 @@ componentDidMount() {
     return(
       <div className="goals">
        
-         <AddGoals/> 
+         <AddGoals updateGoal ={this.updateGoals} goals={this.state.myGoals} /> 
         <GoalList updateGoal ={this.updateGoals} goals={this.state.myGoals}/>
        
         </div>

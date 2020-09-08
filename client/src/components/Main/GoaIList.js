@@ -27,12 +27,12 @@ class GoalList extends Component {
 
         return (
             <div className="goallist">
-                {this.props.goals.map(item => (
+                {this.props.goals.map((item, index) => (
 
                     <div className="goalitem" key={item.id}>
                         <div className="goalitem__info">
                             <div className="goalitem__head">
-                                <p className="goalitem__title">{item.id}. {item.title}</p>
+                                <p className="goalitem__title">{index+1}. {item.title}</p>
                                 <p className="goalitem__notes">{item.notes}</p>
                             </div>
 
