@@ -14,7 +14,7 @@ class AddForm extends Component {
 
     addNewGoal = (e) => {
         e.preventDefault()
-        axios.post(`http://localhost:8080/goals/`, {id: uuidv4(), title: e.target.title.value, notes: e.target.notes.value, date: e.target.date.value})
+        axios.post(`http://localhost:8080/goals/`, {id: uuidv4(), title: e.target.title.value, notes: e.target.notes.value, dueDate: e.target.dueDate.value})
         .then(res => {
          this.props.updateGoal(res.data)
          this.props.onClose(e)
@@ -24,7 +24,7 @@ class AddForm extends Component {
     
     submitHandler = (e) => {
         e.preventDefault()
-        this.props.submitHandler(e.target.title.value, e.target.notes.value, e.target.date.value)
+        this.props.submitHandler(e.target.title.value, e.target.notes.value, e.target.dueDate.value)
 
         e.target.reset();
 
@@ -43,7 +43,7 @@ class AddForm extends Component {
                         <div className="addform__content">
                             <input className="addform__input" id="title" name="title" placeholder="Add your Goal here" />
                             <input className="addform__input" id="notes" name="notes" placeholder="Add your Notes here" />
-                            <input className="addform__input" id="date" name="date" placeholder="Add your Date here" />
+                            <input className="addform__input" id="dueDate" name="dueDate" placeholder="Add your Date here" />
 
                             <div className="addform__buttons">
                                 <button onClick={this.reset} type="reset" className="addform__cancel">Cancel</button>

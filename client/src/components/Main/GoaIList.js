@@ -37,11 +37,8 @@ class GoalList extends Component {
                             </div>
 
                             <div className="goalitem__date">
-                                <Moment
-                                    date={item.dueDate}
-                                    parse="dd-MM-YYYY"
-                                    format="MMM-d"
-                                />
+                                {item.dueDate}
+                                   
                             </div>
                         </div>
                         

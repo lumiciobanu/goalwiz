@@ -3,13 +3,13 @@
     "id": "1",
     "title": "Capstone Project",
     "notes": "Lorem ipsum",
-    "dueDate": "2020-09-15"
+    "dueDate": "Sept, 15th"
     },
     {
     "id": "2",
     "title": "Portfolio Website",
     "notes": "Lorem ipsum",
-    "dueDate": "2020-10-01"
+    "dueDate": "Oct, 1st"
     }    
     
     ]

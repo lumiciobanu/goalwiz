@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import Quote from './Quote';
 import Goals from './Goals';
 import MainMenu from './MainMenu';
+// import Habit from '../Habit/Habit';
 //data
 import quotes from './QuotesData';
 
@@ -48,6 +49,7 @@ class MainPage extends React.Component {
         />
         {this.state.myName}
         <Goals />
+        {/* <Habit /> */}
         <MainMenu />
         </section>
     );
