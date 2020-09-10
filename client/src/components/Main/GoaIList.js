@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import './GoalList.scss';
 
 import { FaTimes } from 'react-icons/fa';
-import Moment from 'react-moment';
 import axios from 'axios';
 
 class GoalList extends Component {

@@ -4,6 +4,7 @@ import './App.css';
 
 //Components
 import MainPage from "./components/Main/MainPage";
+import HabitsPage from "././pages/HabitsPage";
 
 
 function App() {
@@ -11,12 +12,13 @@ function App() {
     <div className="App">
       <Router>
        <MainPage /> 
-      {/* <Switch>
+      <Switch>
           <Route path="/" exact render={() => {
-            return <Redirect to="/main" />
+            return <Redirect to="/" />
           }} />
-          <Route path="/main" exact component={Main} />
-      </Switch> */}
+          <Route path="/" exact component={MainPage} />
+          <Route path="/habitspage" component={HabitsPage} />
+      </Switch>
       </Router>
     </div>
   );
