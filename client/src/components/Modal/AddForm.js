@@ -14,7 +14,7 @@ class AddForm extends Component {
 
     addNewGoal = (e) => {
         e.preventDefault()
-        axios.post(`http://localhost:8080/goals/`, {id: uuidv4(), title: e.target.title.value, notes: e.target.notes.value, dueDate: e.target.dueDate.value})
+        axios.post(`http://goalwizz.herokuapp.com/goals/`, {id: uuidv4(), title: e.target.title.value, notes: e.target.notes.value, dueDate: e.target.dueDate.value})
         .then(res => {
          this.props.updateGoal(res.data)
          this.props.onClose(e)

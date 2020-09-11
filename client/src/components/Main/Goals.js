@@ -23,7 +23,7 @@ class Goals extends React.Component {
  
 componentDidMount() {
     axios
-    .get('http://localhost:8080/goals')
+    .get('http://goalwizz.herokuapp.com/goals')
     .then(res => {
         const myGoals = res.data; 
         this.setState ( { myGoals})

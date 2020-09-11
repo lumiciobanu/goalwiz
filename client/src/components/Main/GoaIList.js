@@ -14,7 +14,7 @@ class GoalList extends Component {
     deleteItem = (id) => {
         axios({
             method: "DELETE",
-            url: `http://localhost:8080/goals/${id}`
+            url: `http://goalwizz.herokuapp.com/goals/${id}`
         })
         .then(res => {
             this.props.updateGoal(res.data) 
