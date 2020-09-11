@@ -7,6 +7,7 @@ import { FaTimes } from 'react-icons/fa';
 
 
 
+
 const initialList = [
   {
     id: uuidv4(),
@@ -80,7 +81,7 @@ const Habits = () => {
       </div>
       <ul>
         {list.map((item) => (
-          <li key={item.id}>{item.name} <form id={item.id}><Checkbox changeHandler={setShow} item={item.id}/> <Checkbox changeHandler={setShow} item={item.id} /> <Checkbox changeHandler={setShow} item={item.id}/> <Checkbox changeHandler={setShow} item={item.id} /> <Checkbox changeHandler={setShow} item={item.id}/> </form>
+          <li key={item.id}>{item.name} <form id={item.id}><Checkbox changeHandler={setShow} item={item.id}/> <Checkbox changeHandler={setShow} item={item.id} /> <Checkbox changeHandler={setShow} item={item.id}/> <Checkbox changeHandler={setShow} item={item.id} /> <Checkbox changeHandler={setShow} item={item.id}/> <Checkbox changeHandler={setShow} item={item.id}/> <Checkbox changeHandler={setShow} item={item.id}/></form>
             <button type="button" onClick={() => handleRemove(item.id)}>
             Remove
             <FaTimes />
@@ -94,4 +95,3 @@ const Habits = () => {
 
 export default Habits;
 
-// onClick={handleRemove(item.id)}

@@ -1,8 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Habits from '../components/Habit/Habits';
 
 
-class HabitsPage extends Component {
-
-}
-
-export default HabitsPage;
+export default function HabitsPage() {
+    return (
+      <div className="habitscontainer">
+        <Habits />
+      </div>
+    );
+  }
+  
