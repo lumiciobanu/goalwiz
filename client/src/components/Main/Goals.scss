@@ -1,0 +1,57 @@
+@import '../../partials/mixins';
+@import '../../partials/typography';
+@import '../../partials/variables';
+
+.goals {
+    background: $purple-bg;
+    padding: 1rem 2rem 0 2rem;
+
+}
+
+.goalitem__info {
+    display: flex;
+    flex-direction: column;
+}
+.goalitem__head {
+    display: flex;
+}
+.goalitem {
+    background: $white;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 4px;
+}
+
+.goalitem__icon {
+    margin-bottom: 3px;
+}
+
+.goalitem__head {
+    display: flex;
+    justify-content: space-between;
+}
+.goalitem__title {
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.goalitem__datainfo {
+    display: flex;
+    justify-content: space-between;
+    @include base-font;
+    
+}
+
+.goalitem__data {
+    color: $accent;
+    font-weight: bold;
+}
+
+.goalitem__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+.goalitem__delete {
+    background: #ffffff;
+    border-width: 0;
+}

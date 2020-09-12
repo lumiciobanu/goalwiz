@@ -1,9 +1,10 @@
 
 import React, { Component } from 'react';
-import './GoalList.scss';
+import '../Main/Goals.scss';
 
 import { FaTimes } from 'react-icons/fa';
 import axios from 'axios';
+import { FaRegCheckCircle } from 'react-icons/fa';
 
 class GoalList extends Component {
 
@@ -31,21 +32,26 @@ class GoalList extends Component {
                     <div className="goalitem" key={item.id}>
                         <div className="goalitem__info">
                             <div className="goalitem__head">
-                                <p className="goalitem__title">{index+1}. {item.title}</p>
-                                <p className="goalitem__notes">{item.notes}</p>
+                            <p className="goalitem__title"><FaRegCheckCircle className="goalitem__icon" fill="#a5a1ac" /> {item.title}</p>
+                            <div className="goalitem__datainfo">
+                                <p className="goalitem__dueto">Due to: &nbsp; </p>
+                                <p className="goalitem__data"> {item.dueDate}</p></div>
                             </div>
 
-                            <div className="goalitem__date">
-                                {item.dueDate}
-                                   
-                            </div>
-                        </div>
-                        
-                            <button className="goalitem__delete"
+                            <div className="goalitem__bottom">
+                                {item.notes}
+                                <button className="goalitem__delete"
                                 onClick={e => {
                                     this.deleteItem(item.id)}}>
                                 <FaTimes />
                             </button>
+                                   
+                            </div>
+
+                            
+                        </div>
+                        
+                            
                         
                     </div>
                 ))}

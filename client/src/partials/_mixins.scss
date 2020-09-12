@@ -21,3 +21,10 @@
     padding: 0;
     list-style: none;
   }
+
+  @mixin base-font {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: normal;
+    color: $black;
+  }

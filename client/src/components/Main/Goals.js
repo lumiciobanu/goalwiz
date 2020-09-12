@@ -3,7 +3,7 @@ import axios from 'axios';
 //components
 import AddGoals from './AddGoals';
 import GoalList from './GoaIList';
-
+import '../Main/Goals.scss';
 
 
 

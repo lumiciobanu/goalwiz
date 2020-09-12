@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../Main/Quote.scss';
+import { FaLightbulb } from 'react-icons/fa';
 
 
 
@@ -16,13 +17,15 @@ class Quote extends React.Component {
         
       >
 
-        <p className="quote__text">{this.props.text}</p>
-        <p className="quote__author">{this.props.author}</p>
+        <p className="quote__text">{this.props.text} <span className="quote__author"> {this.props.author}</span></p>
         <button
           onClick={this.props.handleClick}
           className="quote__add">
-          &#43;</button>
+          <FaLightbulb fill="#ffffff" />
+          </button>
+        
       </div>
+      
       </div>
     );
   }

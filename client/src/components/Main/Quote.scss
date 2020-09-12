@@ -5,19 +5,21 @@
 .quote {
     background: $purple-dark;
     padding: 1rem 2rem;
+    
 
 &__container {
-    padding: 1.5rem;
+    padding: 1.2rem;
     margin: 1rem;
     background: $purple-bg;
     border-radius: 4px;
+    display: flex;
 }
 &__text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: $white;
     text-align: left;
     line-height: 2rem;
-    margin-top: 0.5rem;
+    margin-top: 0;
     margin-bottom: 0;
 }
 &__author {
@@ -25,14 +27,25 @@
     color: $white;
     opacity: 0.5;
     margin-top: 0;
+    font-size: 1rem;
+    position: relative;
+}
+
+&__author:after {
+    position: absolute;
 }
 &__add {
-    color: $accent;
+    color: $white;
     font-weight: bold;  
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: right;
     margin-top: 0;
     margin-bottom: 0;
+    background: transparent;
+    border-width: 0;
+    border-radius: 50%;
+    cursor: pointer;
+   
       
 }
 
