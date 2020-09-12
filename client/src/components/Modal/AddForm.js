@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 
+import './AddForm.scss';
+
 
 class AddForm extends Component {
 
@@ -41,10 +43,11 @@ class AddForm extends Component {
                 
                     <form className="addform" onSubmit={this.addNewGoal}>
                         <div className="addform__content">
+                            <div className="addform__inputs">
                             <input className="addform__input" id="title" name="title" placeholder="Add your Goal here" />
-                            <input className="addform__input" id="notes" name="notes" placeholder="Add your Notes here" />
+                            <input className="addform__input addform__input--notes" id="notes" name="notes" placeholder="Add your Notes here" />
                             <input className="addform__input" id="dueDate" name="dueDate" placeholder="Add your Date here" />
-
+                            </div>
                             <div className="addform__buttons">
                                 <button onClick={this.reset} type="reset" className="addform__cancel">Cancel</button>
 
@@ -52,7 +55,7 @@ class AddForm extends Component {
                                     type="submit"
                                     className="addform__add"
                                     >
-                                    + Add Goal</button>
+                                    Add Goal</button>
 
                             </div>
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AddForm from './AddForm';
 import './ModalAdd.scss';
+import {FaTimes} from 'react-icons/fa';
 
 
 
@@ -21,16 +22,16 @@ class ModalAdd extends Component {
                 <div className="modal-main">
                     <p className="modal__close" onClick={e => {
                         this.onClose(e);
-                    }}>&times;</p>
+                    }}><FaTimes/></p>
                     <AddForm onClose={this.onClose} updateGoal={this.props.updateGoal}/>
-                    <div className="modal__actions">
+                    {/* <div className="modal__actions">
                         <button className="modal__secondary-button" onClick={e => {
                             this.onClose(e);
                         }}>
-                            X
+                            Close
                     </button>
                        
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

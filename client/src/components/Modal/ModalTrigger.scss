@@ -1,0 +1,15 @@
+@import "../../partials/variables";
+@import "../../partials/typography";
+@import "../../partials/mixins";
+
+
+.modal__showbtn {
+    color: $white;
+    background: $accent;
+    border-width: 0;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+}

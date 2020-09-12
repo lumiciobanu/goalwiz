@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './AddGoals.scss';
-import { FaPlus } from "react-icons/fa";
+
 import ModalTrigger from '../Modal/ModalTrigger'
 
 export default function AddGoals (props) {

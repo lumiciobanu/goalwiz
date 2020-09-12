@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ModalAdd from '../Modal/ModalAdd';
 
+import { FaPlus } from "react-icons/fa";
+import '../Modal/ModalTrigger.scss';
 
 class ModalTrigger extends Component {
 
@@ -33,13 +35,13 @@ class ModalTrigger extends Component {
                     updateGoal={this.props.updateGoal}
                 />}
                 {this.state.show && <h2>Lorem ispum</h2>}
-                <button className="modal__icon-delete"
+                <button className="modal__showbtn"
                     onClick={e => {
                         this.showModal(e);
                     }}
                 >
                     
-                </button>
+                <FaPlus /> Add New Goal</button>
 
             </div>
         );
