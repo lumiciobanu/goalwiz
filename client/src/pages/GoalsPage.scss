@@ -1,0 +1,16 @@
+@import '../partials/mixins';
+@import '../partials/typography';
+@import '../partials/variables';
+
+
+.goalscontainer {
+    background: $purple-dark;
+    height: 82vh;
+}
+
+.goals-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}

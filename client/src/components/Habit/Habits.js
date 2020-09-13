@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+
 
 import { v4 as uuidv4 } from 'uuid';
 import { FaTimes } from 'react-icons/fa';
 
 import './Habits.scss';
 import { FaPlus } from "react-icons/fa";
+import { FaAngleLeft } from "react-icons/fa";
+import FlashMessage from 'react-flash-message';
+
 
 
 
@@ -76,13 +81,16 @@ const Habits = () => {
   return (
 
     <div className="habits-container">
-      {show &&
+      {show && <FlashMessage duration={2000} persistOnHover={true}>
         <div className="habits-show">
-          <div className="habits-show-main"><p>Hello</p></div>
-        </div>}
+          <div className="habits-show-main"><p>Keep up the good work!</p></div>
+        </div>
+      </FlashMessage>}
 
-      <h2 className="habits-title">Habits list</h2>
 
+      <h2 className="habits-title"><Link to="/MainPage"><FaAngleLeft fill="#ffffff" /></Link>Habits list</h2>
+
+      <div className="habits-box">
       <div className="habits-form">
         <input className="habits-input" type="text" value={name} onChange={handleChange} placeholder="New habit" />
         <button className="habits-add" type="button" onClick={handleAdd}>
@@ -102,6 +110,7 @@ const Habits = () => {
           </li>
         ))}
       </ul>
+      </div>
     </div>
   );
 };

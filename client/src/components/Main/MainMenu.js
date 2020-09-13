@@ -15,7 +15,7 @@ function MainMenu() {
     return (
       <div className="main-menu">
         
-        <MdDashboard color="#5B3E96" size="1.5em"/>
+        <Link to="/goalspage"><MdDashboard color="#5B3E96" size="1.5em"/></Link>
         <Link to="/habitspage"><MdList color="#5B3E96" size="1.5em" /></Link>
         <MdCreate color="#5B3E96" size="1.5em" />
         <MdLibraryBooks color="#5B3E96" size="1.5em" />

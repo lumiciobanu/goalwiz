@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 //components
 import AddGoals from './AddGoals';
-import GoalList from './GoaIList';
+import GoalList from './GoalList';
 import '../Main/Goals.scss';
 
 

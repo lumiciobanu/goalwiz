@@ -1,6 +1,8 @@
 import React from 'react';
 import Logo from '../../assets/logo/logo-goalwizz.svg'
 import '../Header/Header.scss';
+import { Link } from "react-router-dom";
+
 
 
 
@@ -8,7 +10,7 @@ import '../Header/Header.scss';
 function Header() {
     return (
         <div className="header">
-            <img className="header__logo" alt="site logo" src={Logo} />
+           <Link to="/MainPage"><img className="header__logo" alt="site logo" src={Logo} /></Link> 
     </div>
     );
   }

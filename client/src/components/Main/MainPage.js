@@ -1,10 +1,11 @@
 import React from 'react';
 //components
-import Header from '../Header/Header';
 import Quote from './Quote';
 import Goals from './Goals';
-import MainMenu from './MainMenu';
-import Habits from '../Habit/Habits';
+
+import './MainPage.scss';
+
+
 //data
 import quotes from './QuotesData';
 
@@ -45,15 +46,16 @@ class MainPage extends React.Component {
   render () {
     return(
       <section className="main-section">
-        <Header />
+        
         <Quote 
           handleClick={this.handleClick}
           {...this.state}
         />
         {this.state.myName}
         <Goals />
-        <Habits />
-        <MainMenu />
+       
+       
+       
       
         </section>
     );

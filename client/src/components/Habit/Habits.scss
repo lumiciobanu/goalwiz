@@ -4,7 +4,8 @@
 
 .habits-container {
     background: $purple-dark;
-    padding: 1rem 2rem 3rem;
+    padding: 1rem 2rem 2rem;
+    height: 82vh;
 }
 
 .habits-title {
@@ -14,6 +15,9 @@
     padding-bottom: 1rem;
 }
 
+// .habits-box {
+//     background: $purple-bg;
+// }
 .habits-add {
     color: $white;
     background: $accent;
@@ -43,9 +47,8 @@
 }
 
 .habits-ulist {
-    padding: 1rem;
+    padding: 2rem 1rem;
     margin: 0;
-    padding: 0;
     text-indent: 0;
     list-style-type: none;
 }
