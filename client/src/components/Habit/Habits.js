@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { FaTimes } from 'react-icons/fa';
 
+import './Habits.scss';
+import { FaPlus } from "react-icons/fa";
 
 
 
@@ -20,30 +22,31 @@ const initialList = [
 ];
 
 const Checkbox = (props) => (
-      <input
-      id="checkbox"
-      name="checkbox"
-      type="checkbox"
-      className="check__checkbox"
-      onChange={() => {
-        let form = document.getElementById(props.item)
-        let checkedBoxes = 0
-        form.childNodes.forEach (
-          element => {
-            if (element.checked) {
-              checkedBoxes += 1
-            }
+  <input
+    id="checkbox"
+    name="checkbox"
+    type="checkbox"
+    className="check-checkbox"
+    onChange={() => {
+      let form = document.getElementById(props.item)
+      let checkedBoxes = 0
+      form.childNodes.forEach(
+        element => {
+          if (element.checked) {
+            checkedBoxes += 1
           }
-        )
-        if (checkedBoxes === 4) {
-          props.changeHandler (true)
         }
+      )
+      if (checkedBoxes === 7) {
+        props.changeHandler(true)
+      }
 
-        else if (checkedBoxes === 7) {
-          props.changeHandler (true)
-      }}}
-    />
- 
+      // else if (checkedBoxes === 7) {
+      //   props.changeHandler(true)
+      // }
+    }}
+  />
+
 );
 
 
@@ -58,7 +61,7 @@ const Habits = () => {
   }
 
   function handleAdd() {
-    const newList = list.concat({ id:uuidv4(), name });
+    const newList = list.concat({ id: uuidv4(), name });
     setList(newList);
     setName("");
   }
@@ -68,24 +71,34 @@ const Habits = () => {
 
     setList(removeList);
   }
-  
+
+
   return (
-    <div>
-      {show && <h1>Hello</h1> }
-      
-      <div>
-        <input type="text" value={name} onChange={handleChange} />
-        <button type="button" onClick={handleAdd}>
-          Add New Habit
+
+    <div className="habits-container">
+      {show &&
+        <div className="habits-show">
+          <div className="habits-show-main"><p>Hello</p></div>
+        </div>}
+
+      <h2 className="habits-title">Habits list</h2>
+
+      <div className="habits-form">
+        <input className="habits-input" type="text" value={name} onChange={handleChange} placeholder="New habit" />
+        <button className="habits-add" type="button" onClick={handleAdd}>
+          <FaPlus /> Add New Habit
           </button>
       </div>
-      <ul>
+      <ul className="habits-ulist">
         {list.map((item) => (
-          <li key={item.id}>{item.name} <form id={item.id}><Checkbox changeHandler={setShow} item={item.id}/> <Checkbox changeHandler={setShow} item={item.id} /> <Checkbox changeHandler={setShow} item={item.id}/> <Checkbox changeHandler={setShow} item={item.id} /> <Checkbox changeHandler={setShow} item={item.id}/> <Checkbox changeHandler={setShow} item={item.id}/> <Checkbox changeHandler={setShow} item={item.id}/></form>
-            <button type="button" onClick={() => handleRemove(item.id)}>
-            Remove
-            <FaTimes />
-            </button>
+          <li className="habits-list" key={item.id}>{item.name}
+            <div className="habits-form-button">
+              <form id={item.id}>
+                <Checkbox changeHandler={setShow} item={item.id} /> <Checkbox changeHandler={setShow} item={item.id} /> <Checkbox changeHandler={setShow} item={item.id} /> <Checkbox changeHandler={setShow} item={item.id} /> <Checkbox changeHandler={setShow} item={item.id} /> <Checkbox changeHandler={setShow} item={item.id} /> <Checkbox changeHandler={setShow} item={item.id} /></form>
+              <button className="habits-remove" type="button" onClick={() => handleRemove(item.id)}>
+                <FaTimes />
+              </button>
+            </div>
           </li>
         ))}
       </ul>

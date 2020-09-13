@@ -14,7 +14,7 @@
     padding: 2.5rem;
     width: 100vw;
     height: 100vh;
-
+}
     .modal-main {
         display: flex;
         flex-direction: column;
@@ -23,20 +23,20 @@
         background: white;
         box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
         position: absolute;
-        top: 20%;
+        top: 30%;
         left: 4%;
         right: 4%;
         bottom: 5%;
         right: 4%;
         padding: 2.5rem;
         width: 92%;
-        height: 50%;
+        height: 40%;
 
        
     }
 
     
-&__close {
+.modal__close {
     position: absolute;
   top: 10px;
   right: 30px;
@@ -48,17 +48,17 @@
   cursor: pointer;
 }
 
-&__header {
+.modal__header {
     margin-top: 2rem;
     
 }
 
-&__content {
+.modal__content {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
-&__actions {
+.modal__actions {
     display: flex;
     flex-wrap: wrap;
     
@@ -66,7 +66,7 @@
 
 
 
-&__secondary-button {
+.modal__secondary-button {
     height: 2rem;
     background: white;
     padding-right: 1rem;
@@ -80,12 +80,12 @@
 }
 
 
-&__secondary-button:hover {
+.modal__secondary-button:hover {
     border: 1px solid black;
     color: black;
 }
 
-&__delete-button {
+.modal__delete-button {
     height: 2rem;
     background: red;
     color: white;
@@ -98,9 +98,8 @@
    
 }
 
-&__delete-button:hover {
+.modal__delete-button:hover {
     background: black;
     border: 1px solid black;
 }
 
-}
