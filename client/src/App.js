@@ -10,7 +10,7 @@ import MainMenu from "././components/Main/MainMenu";
 import Quote from "././components/Main/Quote";
 import Goals from "././components/Main/Goals";
 import GoalsPage from "././pages/GoalsPage";
-import MyLibraryPage from "././pages/MyLibraryPage";
+
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
           <Route path="/MainPage" exact component={MainPage} />
           <Route path="/goalspage" exact component={GoalsPage} />
           <Route path="/habitspage" exact component={HabitsPage} />
-          <Route path="/mylibrarypage" exact component={MyLibraryPage} />
+          
       </Switch>
       <MainMenu /> 
       
