@@ -7,8 +7,6 @@ import MainPage from "./components/Main/MainPage";
 import HabitsPage from "././pages/HabitsPage";
 import Header from "././components/Header/Header";
 import MainMenu from "././components/Main/MainMenu";
-import Quote from "././components/Main/Quote";
-import Goals from "././components/Main/Goals";
 import GoalsPage from "././pages/GoalsPage";
 
 
